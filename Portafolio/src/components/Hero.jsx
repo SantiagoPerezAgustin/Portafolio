@@ -116,7 +116,7 @@ const Hero = () => {
             },
             {
               label: "Email",
-              href: "santiagus153@gmail.com",
+              href: "mailto:santiagus153@gmail.com?subject=Contacto%20desde%20mi%20portafolio",
               Icon: Mail,
             },
           ].map((social, index) => (

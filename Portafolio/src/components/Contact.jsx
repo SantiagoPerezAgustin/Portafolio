@@ -6,8 +6,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "tu@email.com",
-      href: "mailto:tu@email.com",
+      value: "santiagus153@gmail.com",
+      href: "mailto:santiagus153@gmail.com",
     },
     {
       icon: Phone,
@@ -53,10 +53,7 @@ const Contact = () => {
     >
       <div className="max-w-4xl mx-auto w-full">
         {/* Header */}
-        <motion.div
-          variants={itemVariants}
-          className="text-center mb-16"
-        >
+        <motion.div variants={itemVariants} className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Ponte en Contacto
           </h2>
@@ -96,7 +93,10 @@ const Contact = () => {
         >
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-semibold text-slate-300 mb-2">
+              <label
+                htmlFor="name"
+                className="block text-sm font-semibold text-slate-300 mb-2"
+              >
                 Nombre
               </label>
               <input
@@ -107,20 +107,27 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-slate-300 mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-semibold text-slate-300 mb-2"
+              >
                 Email
               </label>
               <input
                 type="email"
                 id="email"
                 className="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-cyan-500/20 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500/50 transition"
-                placeholder="tu@email.com"
+                placeholder="santiagus153@gmail.com"
+                defaultValue="santiagus153@gmail.com"
               />
             </div>
           </div>
 
           <div>
-            <label htmlFor="subject" className="block text-sm font-semibold text-slate-300 mb-2">
+            <label
+              htmlFor="subject"
+              className="block text-sm font-semibold text-slate-300 mb-2"
+            >
               Asunto
             </label>
             <input
@@ -132,7 +139,10 @@ const Contact = () => {
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-semibold text-slate-300 mb-2">
+            <label
+              htmlFor="message"
+              className="block text-sm font-semibold text-slate-300 mb-2"
+            >
               Mensaje
             </label>
             <textarea
@@ -154,11 +164,10 @@ const Contact = () => {
         </motion.form>
 
         {/* Social Links */}
-        <motion.div
-          variants={itemVariants}
-          className="mt-16 text-center"
-        >
-          <p className="text-slate-400 mb-8">O conecta conmigo en redes sociales:</p>
+        <motion.div variants={itemVariants} className="mt-16 text-center">
+          <p className="text-slate-400 mb-8">
+            O conecta conmigo en redes sociales:
+          </p>
           <div className="flex justify-center gap-6">
             {["Twitter", "LinkedIn", "GitHub"].map((social, index) => (
               <motion.a

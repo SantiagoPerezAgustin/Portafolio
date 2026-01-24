@@ -79,7 +79,6 @@ const Projects = () => {
               whileHover={{ y: -10 }}
               className="group relative rounded-xl overflow-hidden bg-slate-800/40 backdrop-blur border border-cyan-400/30 hover:border-cyan-400/70 transition-all"
             >
-              {/* Image */}
               <div className="relative h-48 overflow-hidden bg-slate-900">
                 <img
                   src={project.image}
@@ -89,7 +88,6 @@ const Projects = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-40" />
               </div>
 
-              {/* Content */}
               <div className="p-6">
                 <h3 className="text-xl font-bold text-cyan-400 mb-2">
                   {project.title}
@@ -98,7 +96,6 @@ const Projects = () => {
                   {project.description}
                 </p>
 
-                {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech, idx) => (
                     <span
@@ -110,7 +107,6 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* Links */}
                 <div className="flex gap-4 pt-4 border-t border-cyan-400/20">
                   <a
                     href={project.github}
