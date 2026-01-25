@@ -5,18 +5,19 @@ const About = () => {
   const skills = [
     {
       icon: Code2,
-      title: "Desarrollo",
-      description: "React, Node.js, JavaScript, TypeScript, Express, MongoDB",
+      title: "Backend",
+      description: ".NET, C#, SQL, SQL Server, Python, API REST",
     },
     {
       icon: Palette,
-      title: "Diseño",
-      description: "Tailwind CSS, UI/UX Design, Responsive Design, Animaciones",
+      title: "Frontend",
+      description:
+        "React, TypeScript, JavaScript, HTML, CSS, Responsive Design",
     },
     {
       icon: Zap,
-      title: "Herramientas",
-      description: "Git, Vite, NPM, VS Code, Postman, Figma",
+      title: "Herramientas & Cloud",
+      description: "Git, Visual Studio, VS Code, Microsoft Azure, MySQL",
     },
   ];
 
@@ -59,23 +60,39 @@ const About = () => {
 
         <div className="grid md:grid-cols-2 gap-16">
           {/* Text Content */}
-          <motion.div
-            variants={itemVariants}
-            className="space-y-6"
-          >
+          <motion.div variants={itemVariants} className="space-y-6">
             <p className="text-lg text-slate-300 leading-relaxed">
-              Soy un desarrollador apasionado con experiencia en crear soluciones web modernas y efectivas.
-              Me encanta transformar ideas en código funcional y hermoso.
+              Soy{" "}
+              <span className="text-cyan-400 font-semibold">
+                Técnico Universitario en Programación
+              </span>{" "}
+              por la UTN, especializado en backend. Trabajo con{" "}
+              <span className="text-cyan-400 font-semibold">
+                .NET, C#, SQL Server y Python
+              </span>
+              , diseñando aplicaciones desde cero con enfoque en bases de datos
+              eficientes y construcción de APIs robustas.
             </p>
 
             <p className="text-lg text-slate-300 leading-relaxed">
-              Trabajo con tecnologías modernas y sigo las mejores prácticas en desarrollo. Mi objetivo es
-              crear experiencias que sean tanto hermosas como funcionales.
+              Complemento el backend con{" "}
+              <span className="text-cyan-400 font-semibold">
+                React y TypeScript
+              </span>{" "}
+              para interfaces modernas. Tengo experiencia desplegando en{" "}
+              <span className="text-cyan-400 font-semibold">
+                Microsoft Azure
+              </span>{" "}
+              y desarrollo proyectos full stack individuales.
             </p>
 
             <p className="text-lg text-slate-300 leading-relaxed">
-              Cuando no estoy programando, me encanta aprender cosas nuevas, contribuir en proyectos
-              open-source y explorar las últimas tendencias en desarrollo web.
+              Me enfoco en escribir código claro, escalable y mantenible,
+              aplicando buenas prácticas. Busco mi primera oportunidad como{" "}
+              <span className="text-cyan-400 font-semibold">
+                desarrollador backend o full stack junior
+              </span>
+              , donde pueda aportar valor técnico y crecer profesionalmente.
             </p>
 
             {/* Quick Stats */}
@@ -83,10 +100,7 @@ const About = () => {
               className="grid grid-cols-2 gap-8 mt-8 pt-8 border-t border-cyan-500/20"
               variants={containerVariants}
             >
-              {[
-                { number: "20+", label: "Proyectos" },
-                { number: "5+", label: "Años Exp." },
-              ].map((stat, index) => (
+              {[].map((stat, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
@@ -102,10 +116,7 @@ const About = () => {
           </motion.div>
 
           {/* Skills */}
-          <motion.div
-            className="space-y-6"
-            variants={containerVariants}
-          >
+          <motion.div className="space-y-6" variants={containerVariants}>
             {skills.map((skill, index) => (
               <motion.div
                 key={index}

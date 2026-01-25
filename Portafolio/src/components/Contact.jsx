@@ -12,13 +12,13 @@ const Contact = () => {
     {
       icon: Phone,
       label: "Teléfono",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+54 9 3416 56-9839",
+      href: "tel:+5493416569839",
     },
     {
       icon: MapPin,
       label: "Ubicación",
-      value: "Tu Ciudad, País",
+      value: "Rosario, Santa Fe, Argentina",
       href: "#",
     },
   ];
