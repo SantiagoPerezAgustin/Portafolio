@@ -121,10 +121,10 @@ const About = () => {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="p-6 rounded-xl bg-slate-800/50 border border-cyan-500/20 hover:border-cyan-500/50 hover:bg-slate-800/70 transition group"
+                className="p-6 rounded-xl bg-slate-800/50 border border-cyan-500/20"
               >
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-cyan-500/10 text-cyan-400 group-hover:bg-cyan-500/20 transition">
+                  <div className="p-3 rounded-lg bg-cyan-500/10 text-cyan-400">
                     <skill.icon size={24} />
                   </div>
                   <div>

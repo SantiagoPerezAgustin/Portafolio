@@ -117,8 +117,7 @@ const Contact = () => {
                 type="email"
                 id="email"
                 className="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-cyan-500/20 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500/50 transition"
-                placeholder="santiagus153@gmail.com"
-                defaultValue="santiagus153@gmail.com"
+                placeholder="Ejemplo@gmail.com"
               />
             </div>
           </div>
@@ -169,7 +168,7 @@ const Contact = () => {
             O conecta conmigo en redes sociales:
           </p>
           <div className="flex justify-center gap-6">
-            {["Twitter", "LinkedIn", "GitHub"].map((social, index) => (
+            {["instagram"].map((social, index) => (
               <motion.a
                 key={index}
                 href="#"

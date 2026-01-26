@@ -81,7 +81,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection("projects")}
-            className="px-8 py-4 rounded-lg bg-cyan-500 text-slate-950 font-semibold flex items-center justify-center gap-2 hover:bg-cyan-400 transition"
+            className="px-8 py-4 rounded-lg bg-cyan-500 text-slate-950 font-semibold flex items-center justify-center gap-2 hover:bg-cyan-400 transition cursor-pointer"
           >
             Ver mis proyectos
           </motion.button>
@@ -89,7 +89,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={downloadCV}
-            className="px-8 py-4 rounded-lg border-2 border-cyan-500/50 text-cyan-400 font-semibold hover:bg-cyan-500/10 transition flex items-center justify-center gap-2"
+            className="px-8 py-4 rounded-lg border-2 border-cyan-500/50 text-cyan-400 font-semibold hover:bg-cyan-500/10 transition flex items-center justify-center gap-2 cursor-pointer"
           >
             <Download size={20} />
             Descargar CV

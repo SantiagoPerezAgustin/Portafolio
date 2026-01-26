@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { label: "Inicio", id: "home" },
+    { label: "Inicio", id: "hero" },
     { label: "Sobre mí", id: "about" },
     { label: "Proyectos", id: "projects" },
     { label: "Contacto", id: "contact" },
@@ -30,7 +30,7 @@ const Navbar = () => {
         <motion.span
           whileHover={{ scale: 1.05 }}
           className="text-cyan-400 font-bold text-xl cursor-pointer"
-          onClick={() => scrollToSection("home")}
+          onClick={() => scrollToSection("hero")}
         >
           SP
         </motion.span>

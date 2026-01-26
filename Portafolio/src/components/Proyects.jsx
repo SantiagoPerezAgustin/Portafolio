@@ -11,7 +11,7 @@ const Projects = () => {
       tech: ["React", "Tailwind", "JavaScript"],
       image:
         "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
-      github: "#",
+      github: "https://github.com/SantiagoPerezAgustin/Bichtec-Tienda-Virtual",
       link: "#",
     },
     {
@@ -66,7 +66,7 @@ const Projects = () => {
         </motion.h2>
 
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 cursor-pointer"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
