@@ -5,14 +5,13 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Proyecto 1",
+      title: "BICTECH - Tienda Virtual",
       description:
-        "Aplicación web moderna con React y Tailwind CSS. Interfaz responsiva y animaciones fluidas.",
-      tech: ["React", "Tailwind", "JavaScript"],
-      image:
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop",
-      github: "https://github.com/SantiagoPerezAgustin/Bichtec-Tienda-Virtual",
-      link: "#",
+        "E-commerce full stack con autenticación, gestión de roles, paginación y documentación automática de API. Arquitectura limpia con Clean Architecture.",
+      tech: ["React", "ASP.NET 8", "SQL Server", "Swagger", "xUnit"],
+      image: "/src/assets/bichtec.jpg",
+      github: "https://github.com/emi-pereyra17/BICTECH-Tienda-Virtual",
+      link: "https://github.com/emi-pereyra17/BICTECH-Tienda-Virtual",
     },
     {
       id: 2,
