@@ -10,8 +10,8 @@ const Projects = () => {
         "E-commerce full stack con autenticación, gestión de roles, paginación y documentación automática de API. Arquitectura limpia con Clean Architecture.",
       tech: ["React", "ASP.NET 8", "SQL Server", "Swagger", "xUnit"],
       image: "/src/assets/bichtec.jpg",
-      github: "https://github.com/emi-pereyra17/BICTECH-Tienda-Virtual",
-      link: "https://github.com/emi-pereyra17/BICTECH-Tienda-Virtual",
+      github: "https://github.com/SantiagoPerezAgustin/Bichtec-Tienda-Virtual",
+      link: "https://github.com/SantiagoPerezAgustin/Bichtec-Tienda-Virtual",
     },
     {
       id: 2,
