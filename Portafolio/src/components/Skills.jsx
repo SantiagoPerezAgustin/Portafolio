@@ -1,22 +1,40 @@
 const Skills = ({ allSkills = [] }) => {
-  const skillCategories = [
-    {
-      category: "Frontend",
-      skills: ["React", "TypeScript", "JavaScript", "Tailwind CSS"],
-    },
-    {
-      category: "Backend",
-      skills: [".NET", "C#", "Python", "APIs RESTful"],
-    },
-    {
-      category: "Bases de Datos",
-      skills: ["SQL", "SQL Server", "MySQL", "Entity Framework"],
-    },
-    {
-      category: "Cloud & Herramientas",
-      skills: ["Microsoft Azure", "Git", "GitHub", "Visual Studio"],
-    },
-  ];
+  
+const skillCategories = [
+  {
+    category: "Frontend",
+    skills: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "Vite",
+      "Framer Motion",
+    ],
+  },
+  {
+    category: "Backend",
+    skills: [".NET", "ASP.NET Core", "C#", "Python", "FastAPI", "APIs RESTful"],
+  },
+  {
+    category: "Bases de Datos",
+    skills: ["SQL", "SQL Server", "MySQL", "Entity Framework"],
+  },
+  {
+    category: "IA, OCR y APIs",
+    skills: ["Mistral", "Tesseract", "PyPDF2", "Adzuna API", "APIs externas"],
+  },
+  {
+    category: "Cloud & Herramientas",
+    skills: [
+      "Microsoft Azure",
+      "Git",
+      "GitHub",
+      "Visual Studio",
+      "Microservicios",
+    ],
+  },
+];
 
   return (
     <section id="skills" className="py-10 px-4">

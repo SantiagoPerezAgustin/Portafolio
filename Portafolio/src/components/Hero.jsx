@@ -7,13 +7,12 @@ const Hero = () => {
     element?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const downloadCV = () => {
-    // Aquí irá la descarga del CV
-    const link = document.createElement("a");
-    link.href = "/CV.pdf"; // Cambia esto por la ruta de tu CV
-    link.download = "Santiago_Perez_CV.pdf";
-    link.click();
-  };
+const downloadCV = () => {
+  const link = document.createElement("a");
+  link.href = "/mi-cv-profesional.pdf";
+  link.download = "Santiago_Perez_CV.pdf"; // nombre al descargar
+  link.click();
+};
 
   return (
     <section

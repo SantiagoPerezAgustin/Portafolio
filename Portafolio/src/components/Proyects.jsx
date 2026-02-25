@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
-import { Github, ExternalLink } from "lucide-react";
+import { useState } from "react";
+import { Github, ExternalLink, ChevronUp } from "lucide-react";
+import imagenInicio from "../assets/iNICIO.png";
+import imagenBrisaCalzado from "../assets/Brisa.png";
+import ProjectDetailModal from "./ProjectDetailModal";
 
 const Projects = () => {
+
+  const [selectedProject, setSelectedProject] = useState(null);
   const projects = [
     {
       id: 1,
@@ -15,25 +21,42 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Proyecto 2",
+      title: "Procesamiento de documentos + recomendación de ofertas",
       description:
-        "Full Stack application con backend en Node.js y base de datos MongoDB.",
-      tech: ["Node.js", "React", "MongoDB"],
-      image:
-        "https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=500&h=300&fit=crop",
-      github: "#",
-      link: "#",
+        "App full stack con microservicios: OCR (Tesseract, PyPDF2), resumen y clasificación con Mistral, gestión de candidatos y recomendación de ofertas con Adzuna API. Matching CV–oferta con IA y experiencia tipo portal de empleo.",
+      tech: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind",
+        "FastAPI",
+        "ASP.NET 8",
+        "Tesseract",
+        "Mistral",
+        "Adzuna API",
+      ],
+      image: imagenInicio,
+      github: "https://github.com/SantiagoPerezAgustin/OCR-ia",
+      link: "https://github.com/TU_USUARIO/TU_REPO",
     },
     {
       id: 3,
-      title: "Proyecto 3",
+      title: "Brisa Calzado - E-commerce",
       description:
-        "Dashboard interactivo con gráficos en tiempo real y UI responsiva.",
-      tech: ["React", "TypeScript", "Chart.js"],
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
-      github: "#",
-      link: "#",
+        "E-commerce full stack para emprendimiento familiar de calzado. Backend .NET 8 y Entity Framework sobre SQL Server con API REST y arquitectura limpia. Frontend React 19 con Vite y Tailwind, React Router y Context API. Catálogo por categorías, búsqueda y filtros, carrito persistente, gestión de pedidos, contacto e integración con WhatsApp.",
+      tech: [
+        "React 19",
+        "Vite",
+        "Tailwind CSS",
+        "React Router",
+        ".NET 8",
+        "Entity Framework",
+        "SQL Server",
+        "API REST",
+      ],
+      image: imagenBrisaCalzado,
+      github: "https://github.com/SantiagoPerezAgustin/BrisaCalzado",
+      link: "https://github.com/TU_USUARIO/brisa-calzado",
     },
   ];
 
@@ -75,7 +98,6 @@ const Projects = () => {
             <motion.div
               key={project.id}
               variants={cardVariants}
-              whileHover={{ y: -10 }}
               className="group relative rounded-xl overflow-hidden bg-slate-800/40 backdrop-blur border border-cyan-400/30 hover:border-cyan-400/70 transition-all"
             >
               <div className="relative h-48 overflow-hidden bg-slate-900">
@@ -85,6 +107,14 @@ const Projects = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-40" />
+                <button
+                  type="button"
+                  onClick={() => setSelectedProject(project)}
+                  className="absolute top-3 right-3 flex items-center gap-1 px-3 py-1.5 rounded-lg bg-slate-800/90 text-cyan-300 text-sm font-medium hover:bg-cyan-500/20 border border-cyan-400/30 transition"
+                >
+                  <ChevronUp size={16} className="rotate-180" />
+                  Ver más
+                </button>
               </div>
 
               <div className="p-6">
@@ -109,6 +139,8 @@ const Projects = () => {
                 <div className="flex gap-4 pt-4 border-t border-cyan-400/20">
                   <a
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex-1 flex items-center justify-center gap-2 py-2 text-slate-300 hover:text-cyan-400 transition-colors"
                   >
                     <Github size={16} />
@@ -116,6 +148,8 @@ const Projects = () => {
                   </a>
                   <a
                     href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex-1 flex items-center justify-center gap-2 py-2 text-slate-300 hover:text-cyan-400 transition-colors"
                   >
                     <ExternalLink size={16} />
@@ -125,6 +159,12 @@ const Projects = () => {
               </div>
             </motion.div>
           ))}
+          {selectedProject && (
+            <ProjectDetailModal
+              project={selectedProject}
+              onClose={() => setSelectedProject(null)}
+            />
+          )}
         </motion.div>
       </div>
     </section>
