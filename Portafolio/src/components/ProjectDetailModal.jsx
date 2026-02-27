@@ -43,7 +43,7 @@ const ProjectDetailModal = ({ project, onClose }) => {
 
           <div className="p-6">
             <p className="text-slate-300 text-sm mb-6 leading-relaxed">
-              {project.description}
+              {project.longDescription || project.description}
             </p>
 
             <div className="flex flex-wrap gap-2 mb-6">

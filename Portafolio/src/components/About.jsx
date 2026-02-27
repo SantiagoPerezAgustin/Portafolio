@@ -100,7 +100,12 @@ const About = () => {
               className="grid grid-cols-2 gap-8 mt-8 pt-8 border-t border-cyan-500/20"
               variants={containerVariants}
             >
-              {[].map((stat, index) => (
+              {[
+                { number: "3+", label: "Proyectos terminados" },
+                { number: "UTN", label: "Técnico en Programación" },
+                { number: "5+", label: "Tecnologías dominadas" },
+                { number: "2", label: "Años de experiencia" },
+              ].map((stat, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}

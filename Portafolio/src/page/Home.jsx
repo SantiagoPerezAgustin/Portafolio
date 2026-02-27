@@ -5,12 +5,13 @@ import About from "../components/About";
 import Projects from "../components/Proyects";
 import Contact from "../components/Contact";
 import Skills from "../components/Skills";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const projectsForSkills = [
-    { tech: ["React", "Tailwind", "JavaScript"] },
-    { tech: ["Node.js", "React", "MongoDB"] },
-    { tech: ["React", "TypeScript", "Chart.js"] },
+    { tech: ["React", "ASP.NET 8", "SQL Server", "Swagger", "xUnit"] },
+    { tech: ["React", "TypeScript", "Vite", "Tailwind", "FastAPI", "ASP.NET 8", "Tesseract", "Mistral", "Adzuna API"] },
+    { tech: ["React 19", "Vite", "Tailwind CSS", "React Router", ".NET 8", "Entity Framework", "SQL Server", "API REST"] },
   ];
 
   const allSkills = [...new Set(projectsForSkills.flatMap((p) => p.tech))];
@@ -28,6 +29,7 @@ const Home = () => {
       <Projects />
 
       <Contact />
+      <Footer />
     </>
   );
 };

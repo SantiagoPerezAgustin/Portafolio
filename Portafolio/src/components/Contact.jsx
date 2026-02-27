@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Github, Linkedin } from "lucide-react";
 
 const Contact = () => {
   const contactMethods = [
@@ -93,14 +93,28 @@ const Contact = () => {
             O conecta conmigo en redes sociales:
           </p>
           <div className="flex justify-center gap-6">
-            {["instagram"].map((social, index) => (
+            {[
+              {
+                label: "GitHub",
+                href: "https://github.com/SantiagoPerezAgustin",
+                Icon: Github,
+              },
+              {
+                label: "LinkedIn",
+                href: "https://www.linkedin.com/in/santiago-perez-666362282/",
+                Icon: Linkedin,
+              },
+            ].map((social, index) => (
               <motion.a
                 key={index}
-                href="#"
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
                 className="w-12 h-12 rounded-lg bg-slate-800/50 border border-cyan-500/20 flex items-center justify-center text-cyan-400 hover:border-cyan-500/50 hover:bg-cyan-500/10 transition"
+                aria-label={social.label}
               >
-                <span className="text-sm font-bold">{social[0]}</span>
+                <social.Icon size={20} />
               </motion.a>
             ))}
           </div>
