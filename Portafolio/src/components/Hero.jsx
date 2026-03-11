@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Download, ArrowDown } from "lucide-react";
+import { Github, Linkedin, Download, ArrowDown } from "lucide-react";
 
 const Hero = () => {
   const scrollToSection = (id) => {
@@ -17,7 +17,6 @@ const Hero = () => {
   const socials = [
     { label: "GitHub", href: "https://github.com/SantiagoPerezAgustin", Icon: Github },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/santiago-perez-666362282/", Icon: Linkedin },
-    { label: "Email", href: "mailto:santiagus153@gmail.com?subject=Contacto%20desde%20mi%20portafolio", Icon: Mail },
   ];
 
   return (
