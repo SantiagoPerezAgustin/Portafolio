@@ -1,34 +1,35 @@
+import { lazy, Suspense } from "react";
 import AnimatedBackground from "../components/AnimatedBackground";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
-import About from "../components/About";
-import Projects from "../components/Proyects";
-import Contact from "../components/Contact";
-import Skills from "../components/Skills";
 import Footer from "../components/Footer";
 
-const Home = () => {
-  const projectsForSkills = [
-    { tech: ["React", "ASP.NET 8", "SQL Server", "Swagger", "xUnit"] },
-    { tech: ["React", "TypeScript", "Vite", "Tailwind", "FastAPI", "ASP.NET 8", "Tesseract", "Mistral", "Adzuna API"] },
-    { tech: ["React 19", "Vite", "Tailwind CSS", "React Router", ".NET 8", "Entity Framework", "SQL Server", "API REST"] },
-  ];
+// Carga diferida: estas secciones se descargan después del Hero (carga más rápida en móviles)
+const About = lazy(() => import("../components/About"));
+const Skills = lazy(() => import("../components/Skills"));
+const Projects = lazy(() => import("../components/Proyects"));
+const Contact = lazy(() => import("../components/Contact"));
 
-  const allSkills = [...new Set(projectsForSkills.flatMap((p) => p.tech))];
+const Fallback = () => (
+  <div className="min-h-[50vh] flex items-center justify-center">
+    <span className="w-8 h-8 border-2 border-violet-500/30 border-t-violet-500 rounded-full animate-spin" />
+  </div>
+);
+
+const Home = () => {
   return (
     <>
       <AnimatedBackground />
       <Navbar />
       <Hero />
-      <About />
 
-      {/* Skills fuera de Proyectos */}
-      <Skills allSkills={allSkills} />
+      <Suspense fallback={<Fallback />}>
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </Suspense>
 
-      {/* Proyectos — componente restaurado sin filtro */}
-      <Projects />
-
-      <Contact />
       <Footer />
     </>
   );

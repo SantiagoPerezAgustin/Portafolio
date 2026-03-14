@@ -1,0 +1,21 @@
+/* Animaciones ligeras del fondo (CSS puro, sin JS) */
+@keyframes blob-float-1 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(60px, -40px); }
+}
+@keyframes blob-float-2 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-50px, 60px); }
+}
+@keyframes blob-float-3 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(40px, -60px); }
+}
+
+.animate-blob-1 { animation: blob-float-1 18s ease-in-out infinite; }
+.animate-blob-2 { animation: blob-float-2 22s ease-in-out infinite 3s; }
+.animate-blob-3 { animation: blob-float-3 14s ease-in-out infinite 6s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-blob-1, .animate-blob-2, .animate-blob-3 { animation: none; }
+}

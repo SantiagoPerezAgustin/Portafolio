@@ -60,6 +60,8 @@ const ProjectDetailModal = ({ project, onClose }) => {
             <img
               src={project.image}
               alt={project.title}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover opacity-70"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/30 to-transparent" />
