@@ -10,12 +10,6 @@ const Skills = lazy(() => import("../components/Skills"));
 const Projects = lazy(() => import("../components/Proyects"));
 const Contact = lazy(() => import("../components/Contact"));
 
-const Fallback = () => (
-  <div className="min-h-[50vh] flex items-center justify-center">
-    <span className="w-8 h-8 border-2 border-violet-500/30 border-t-violet-500 rounded-full animate-spin" />
-  </div>
-);
-
 const Home = () => {
   return (
     <>
@@ -23,10 +17,17 @@ const Home = () => {
       <Navbar />
       <Hero />
 
-      <Suspense fallback={<Fallback />}>
+      {/* Fallback vacío: evita spinner pesado; las secciones aparecen al cargar cada chunk */}
+      <Suspense fallback={null}>
         <About />
+      </Suspense>
+      <Suspense fallback={null}>
         <Skills />
+      </Suspense>
+      <Suspense fallback={null}>
         <Projects />
+      </Suspense>
+      <Suspense fallback={null}>
         <Contact />
       </Suspense>
 

@@ -1,10 +1,8 @@
-import { motion } from "framer-motion";
-import { MapPin, Phone, Github, Linkedin, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { MapPin, Phone, Github, Linkedin, Send, CheckCircle, AlertCircle, ArrowUpRight } from "lucide-react";
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useInView } from "../hooks/useInView";
 
 // ─── CONFIGURACIÓN EMAILJS ──────────────────────────────────────────────────
-// Completá estos tres valores después de crear tu cuenta en emailjs.com
 const EMAILJS_SERVICE_ID  = "service_0rrpg1i";
 const EMAILJS_TEMPLATE_ID = "template_d898fvr";
 const EMAILJS_PUBLIC_KEY  = "F2-8TPoL0g62szx0t";
@@ -12,18 +10,15 @@ const EMAILJS_PUBLIC_KEY  = "F2-8TPoL0g62szx0t";
 
 const Contact = () => {
   const formRef = useRef(null);
-  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+  const [status, setStatus] = useState("idle");
+  const [ref, inView] = useInView();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("sending");
     try {
-      await emailjs.sendForm(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        formRef.current,
-        EMAILJS_PUBLIC_KEY
-      );
+      const emailjs = (await import("@emailjs/browser")).default;
+      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formRef.current, EMAILJS_PUBLIC_KEY);
       setStatus("success");
       formRef.current.reset();
     } catch {
@@ -37,8 +32,8 @@ const Contact = () => {
   ];
 
   const socials = [
-    { label: "GitHub",   href: "https://github.com/SantiagoPerezAgustin",                  Icon: Github   },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/santiago-perez-666362282/",     Icon: Linkedin },
+    { label: "GitHub",   href: "https://github.com/SantiagoPerezAgustin",               Icon: Github   },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/santiago-perez-666362282/", Icon: Linkedin },
   ];
 
   const accentMap = {
@@ -47,99 +42,47 @@ const Contact = () => {
     amber:   "border-amber-500/30   bg-amber-500/5   text-amber-400   hover:border-amber-500/60",
   };
 
-  const inputClass =
-    "w-full bg-zinc-800/60 border border-white/8 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-violet-500/50 focus:bg-zinc-800 transition-all";
-
-  const containerVariants = {
-    hidden:  { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.12 } },
-  };
-  const itemVariants = {
-    hidden:  { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
+  const inputClass = "w-full bg-zinc-800/60 border border-white/8 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-violet-500/50 focus:bg-zinc-800 transition-all";
 
   return (
-    <motion.section
-      id="contact"
-      className="py-24 px-6"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      variants={containerVariants}
-    >
+    <section ref={ref} id="contact" className="py-24 px-6">
       <div className="max-w-4xl mx-auto">
-        {/* Section label */}
-        <motion.div variants={itemVariants} className="flex items-center gap-4 mb-4">
+
+        <div className={`${inView ? "anim-visible" : "anim-hidden"} flex items-center gap-4 mb-4`}>
           <span className="text-xs font-bold tracking-[0.3em] uppercase text-violet-500">04</span>
           <span className="h-[1px] w-12 bg-violet-500/40" />
           <span className="text-xs font-medium tracking-widest uppercase text-zinc-500">Contacto</span>
-        </motion.div>
+        </div>
 
-        <motion.h2
-          variants={itemVariants}
-          className="text-5xl md:text-6xl font-black text-white mb-4 leading-tight"
-        >
+        <h2 className={`${inView ? "anim-visible delay-1" : "anim-hidden"} text-5xl md:text-6xl font-black text-white mb-4 leading-tight`}>
           Hablemos.
-        </motion.h2>
+        </h2>
 
-        <motion.p
-          variants={itemVariants}
-          className="text-base text-zinc-500 mb-14 max-w-lg"
-        >
+        <p className={`${inView ? "anim-visible delay-2" : "anim-hidden"} text-base text-zinc-500 mb-14 max-w-lg`}>
           ¿Tenés un proyecto en mente o buscás un desarrollador? Enviame un mensaje.
-        </motion.p>
+        </p>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {/* ── Formulario ── */}
-          <motion.div variants={itemVariants}>
+          {/* Formulario */}
+          <div className={`${inView ? "anim-visible delay-3" : "anim-hidden"}`}>
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-2">
-                  Nombre
-                </label>
-                <input
-                  type="text"
-                  name="from_name"
-                  required
-                  placeholder="Tu nombre"
-                  className={inputClass}
-                />
+                <label className="block text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-2">Nombre</label>
+                <input type="text" name="from_name" required placeholder="Tu nombre" className={inputClass} />
               </div>
-
               <div>
-                <label className="block text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  name="from_email"
-                  required
-                  placeholder="tu@email.com"
-                  className={inputClass}
-                />
+                <label className="block text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-2">Email</label>
+                <input type="email" name="from_email" required placeholder="tu@email.com" className={inputClass} />
               </div>
-
               <div>
-                <label className="block text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-2">
-                  Mensaje
-                </label>
-                <textarea
-                  name="message"
-                  required
-                  rows={5}
-                  placeholder="Contame en qué puedo ayudarte..."
-                  className={`${inputClass} resize-none`}
-                />
+                <label className="block text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-2">Mensaje</label>
+                <textarea name="message" required rows={5} placeholder="Contame en qué puedo ayudarte..." className={`${inputClass} resize-none`} />
               </div>
 
-              {/* Botón enviar */}
-              <motion.button
+              <button
                 type="submit"
                 disabled={status === "sending"}
-                whileHover={{ scale: status === "sending" ? 1 : 1.02, boxShadow: "0 0 24px rgba(139,92,246,0.35)" }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-bold text-sm tracking-wide shadow-lg shadow-violet-900/30 disabled:opacity-60 disabled:cursor-not-allowed transition-all"
+                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-bold text-sm tracking-wide shadow-lg shadow-violet-900/30 disabled:opacity-60 disabled:cursor-not-allowed hover:opacity-90 hover:scale-[1.01] active:scale-[0.99] transition-all"
               >
                 {status === "sending" ? (
                   <>
@@ -147,79 +90,73 @@ const Contact = () => {
                     Enviando...
                   </>
                 ) : (
-                  <>
-                    <Send size={16} />
-                    Enviar mensaje
-                  </>
+                  <><Send size={16} />Enviar mensaje</>
                 )}
-              </motion.button>
+              </button>
 
-              {/* Feedback */}
               {status === "success" && (
-                <motion.div
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="flex items-center gap-2 p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm"
-                >
+                <div className="flex items-center gap-2 p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm">
                   <CheckCircle size={16} />
                   ¡Mensaje enviado! Te respondo a la brevedad.
-                </motion.div>
+                </div>
               )}
               {status === "error" && (
-                <motion.div
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="flex items-center gap-2 p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm"
-                >
+                <div className="flex items-center gap-2 p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm">
                   <AlertCircle size={16} />
-                  Hubo un error. Escribime directo a santiagus153@gmail.com
-                </motion.div>
+                  Hubo un error. Escribime a santiagus153@gmail.com
+                </div>
               )}
             </form>
-          </motion.div>
+          </div>
 
-          {/* ── Info ── */}
-          <motion.div variants={itemVariants} className="space-y-4">
+          {/* Info */}
+          <div className={`${inView ? "anim-visible delay-4" : "anim-hidden"} space-y-4`}>
+            {/* Email CTA */}
+            <div className="p-[1.5px] rounded-2xl bg-gradient-to-r from-violet-500 via-fuchsia-500 to-amber-500">
+              <a
+                href="mailto:santiagus153@gmail.com"
+                className="flex items-center justify-between px-6 py-5 rounded-2xl bg-zinc-900 hover:bg-zinc-800 transition-colors group"
+              >
+                <div>
+                  <p className="text-xs text-zinc-500 font-medium uppercase tracking-widest mb-1">Email directo</p>
+                  <p className="text-base font-black text-white">santiagus153@gmail.com</p>
+                </div>
+                <ArrowUpRight size={22} className="text-violet-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+            </div>
+
             {contactMethods.map((method, index) => (
-              <motion.a
+              <a
                 key={index}
                 href={method.href}
-                whileHover={{ y: -3, scale: 1.01 }}
-                className={`flex items-center gap-4 p-4 rounded-xl border ${accentMap[method.accent]} transition-all`}
+                className={`flex items-center gap-4 p-4 rounded-xl border ${accentMap[method.accent]} hover:-translate-y-0.5 transition-all duration-200`}
               >
-                <div className="flex-shrink-0">
-                  <method.icon size={18} />
-                </div>
+                <method.icon size={18} />
                 <div>
-                  <p className="text-xs text-zinc-600 font-medium uppercase tracking-wider">
-                    {method.label}
-                  </p>
+                  <p className="text-xs text-zinc-600 font-medium uppercase tracking-wider">{method.label}</p>
                   <p className="text-sm text-white font-semibold">{method.value}</p>
                 </div>
-              </motion.a>
+              </a>
             ))}
 
-            {/* Social */}
-            <div className="pt-4 flex gap-3">
+            <div className="flex gap-3 pt-2">
               {socials.map((social, index) => (
-                <motion.a
+                <a
                   key={index}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-zinc-900 border border-white/8 text-zinc-400 hover:text-white hover:border-violet-500/40 transition-all text-sm font-medium"
+                  className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-zinc-900 border border-white/8 text-zinc-400 hover:text-white hover:border-violet-500/40 hover:-translate-y-0.5 active:scale-95 transition-all text-sm font-medium"
                 >
                   <social.Icon size={16} />
                   {social.label}
-                </motion.a>
+                </a>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 
