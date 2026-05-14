@@ -2,17 +2,17 @@ import { Code2, Zap, Palette, Brain } from "lucide-react";
 
 const About = () => {
   const areas = [
-    { icon: Code2,   title: "Backend",       description: ".NET, C#, SQL Server, Python, API REST, FastAPI", color: "violet"  },
-    { icon: Palette, title: "Frontend",       description: "React, TypeScript, JavaScript, Tailwind CSS, Vite", color: "fuchsia" },
-    { icon: Brain,   title: "IA & OCR",       description: "Mistral, Tesseract, PyPDF2, integración de LLMs", color: "amber"   },
-    { icon: Zap,     title: "Cloud & Tools",  description: "Microsoft Azure, Git, GitHub, microservicios",    color: "violet"  },
+    { icon: Code2,   title: "Backend",           description: ".NET 8, C#, SQL Server, Python, FastAPI, APIs REST, JWT", color: "violet"  },
+    { icon: Palette, title: "Frontend",          description: "React, TypeScript, JavaScript, Tailwind CSS, Vite",     color: "fuchsia" },
+    { icon: Brain,   title: "IA & datos",        description: "Mistral, LangChain, RAG, OCR, prompt engineering",       color: "amber"   },
+    { icon: Zap,     title: "Automatización",   description: "n8n, Docker, GitHub Actions, CI/CD, Azure, microservicios", color: "violet"  },
   ];
 
   const stats = [
-    { number: "3+",  label: "Proyectos terminados"    },
-    { number: "UTN", label: "Técnico en Programación"  },
-    { number: "5+",  label: "Tecnologías dominadas"    },
-    { number: "2",   label: "Años de experiencia"      },
+    { number: "5+",  label: "Proyectos destacados"   },
+    { number: "UTN", label: "Técnico en Programación" },
+    { number: "B1",  label: "Inglés (lectura técnica)" },
+    { number: "2+",  label: "Años construyendo producto" },
   ];
 
   const colorMap = {
@@ -33,25 +33,23 @@ const About = () => {
 
         <h2 className="text-5xl md:text-6xl font-black text-white mb-16 leading-tight">
           Hola, soy<br />
-          <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Santiago.</span>
+          <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Santiago Agustín.</span>
         </h2>
 
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div className="space-y-5">
             <p className="text-base text-zinc-400 leading-relaxed">
-              Soy <span className="text-white font-semibold">Técnico Universitario en Programación</span> por la UTN,
-              especializado en backend. Diseño aplicaciones desde cero con enfoque en bases de datos eficientes y{" "}
-              <span className="text-white font-semibold">APIs robustas</span>.
+              Soy <span className="text-white font-semibold">Técnico Universitario en Programación (UTN Rosario)</span> con base sólida en aplicaciones{" "}
+              <span className="text-white font-semibold">robustas y escalables</span>. Me especializo en orquestar{" "}
+              <span className="text-white font-semibold">herramientas de IA y automatización (n8n)</span> para optimizar procesos y generar valor de negocio.
             </p>
             <p className="text-base text-zinc-400 leading-relaxed">
-              Complemento con <span className="text-white font-semibold">React y TypeScript</span> para interfaces modernas.
-              Tengo experiencia en <span className="text-white font-semibold">Microsoft Azure</span> y en integración de{" "}
-              <span className="text-white font-semibold">IA (Mistral)</span> y OCR en aplicaciones reales.
+              Integro el stack tradicional <span className="text-white font-semibold">C#, .NET, React y SQL</span> con soluciones actuales como{" "}
+              <span className="text-white font-semibold">RAG, LLMs y microservicios en Python</span>. Aprendizaje acelerado asistido por IA, enfoque en resultados y automatización proactiva.
             </p>
             <p className="text-base text-zinc-400 leading-relaxed">
-              Busco mi primera oportunidad como{" "}
-              <span className="text-violet-400 font-semibold">desarrollador backend o full stack junior</span>,
-              donde pueda aportar valor técnico y crecer profesionalmente.
+              Busco roles como{" "}
+              <span className="text-violet-400 font-semibold">Full Stack o integrador de IA / automatización</span>, donde pueda sumar desde el código hasta el diseño de flujos y la calidad en producción.
             </p>
 
             <div className="grid grid-cols-2 gap-4 mt-10 pt-10 border-t border-white/5">

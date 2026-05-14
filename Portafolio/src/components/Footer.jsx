@@ -9,7 +9,7 @@ const Footer = () => {
             SP.
           </span>
           <span className="text-zinc-600 text-sm">
-            © {new Date().getFullYear()} Santiago Perez — Full Stack Developer
+            © {new Date().getFullYear()} Santiago Agustín Pérez — Full Stack &amp; IA
           </span>
         </div>
 

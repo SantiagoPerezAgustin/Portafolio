@@ -8,7 +8,7 @@ const Hero = () => {
   const downloadCV = () => {
     const link = document.createElement("a");
     link.href = "/mi-cv-profesional.pdf";
-    link.download = "Santiago_Perez_CV.pdf";
+    link.download = "Santiago_Agustin_Perez_CV.pdf";
     link.click();
   };
 
@@ -29,22 +29,22 @@ const Hero = () => {
         </div>
 
         <div className="mb-4 leading-none tracking-tight">
-          <h1 className="text-6xl md:text-8xl font-black">
-            <span className="text-white">Santiago</span>
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black">
+            <span className="text-white">Santiago Agustín</span>
             <br />
             <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-amber-400 bg-clip-text text-transparent">
-              Perez
+              Pérez
             </span>
           </h1>
         </div>
 
-        <p className="text-lg md:text-xl text-zinc-400 font-medium mb-4 tracking-widest uppercase">
-          Full Stack Developer
+        <p className="text-base sm:text-lg md:text-xl text-zinc-400 font-semibold mb-4 tracking-wide uppercase max-w-2xl mx-auto leading-snug">
+          Full Stack Developer &amp; AI Integrator
         </p>
 
         <p className="text-base text-zinc-500 mb-12 max-w-xl mx-auto leading-relaxed">
-          Construyo aplicaciones web completas — desde la base de datos hasta la UI.
-          Backend robusto con .NET y Python, frontend moderno con React.
+          Técnico en Programación (UTN). Integro <span className="text-zinc-400">.NET, React y SQL</span> con{" "}
+          <span className="text-zinc-400">IA, RAG y automatización en n8n</span> para productos escalables y con impacto en negocio.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">

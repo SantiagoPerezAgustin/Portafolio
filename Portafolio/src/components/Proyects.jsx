@@ -12,16 +12,27 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "BICTECH - Tienda Virtual",
-      tag: "E-commerce",
+      title: "BICTECH — E-commerce escalable",
+      tag: "Full Stack",
       description:
-        "E-commerce full stack con autenticación, gestión de roles, paginación y documentación automática de API. Arquitectura limpia con Clean Architecture.",
+        "Plataforma de comercio electrónico con Clean Architecture, .NET 8, JWT, React + Vite y pipeline CI/CD con GitHub Actions.",
       longDescription:
-        "E-commerce completo con sistema de autenticación de usuarios y gestión de roles. El backend fue construido con ASP.NET 8 aplicando Clean Architecture (Domain, Application, Infrastructure), con SQL Server como base de datos y Swagger para la documentación automática de la API. El frontend en React consume la API REST y ofrece paginación, filtros y una UI responsiva. Incluye tests unitarios con xUnit para garantizar la calidad del código.",
-      tech: ["React", "ASP.NET 8", "SQL Server", "Swagger", "xUnit"],
+        "Desarrollé una plataforma integral de comercio electrónico bajo los principios de Clean Architecture, utilizando .NET 8 y Entity Framework Core para asegurar una base de código mantenible y escalable. Implementé un sistema de autenticación segura mediante JWT y gestioné el estado global en el frontend con React + Vite, optimizando los tiempos de carga y la experiencia de usuario. El proyecto incluye un pipeline de CI/CD con GitHub Actions que automatiza la ejecución de pruebas unitarias y el despliegue continuo, garantizando la estabilidad del entorno de producción.",
+      tech: [
+        "React",
+        "Vite",
+        ".NET 8",
+        "Entity Framework Core",
+        "SQL Server",
+        "JWT",
+        "Swagger",
+        "xUnit",
+        "GitHub Actions",
+        "Clean Architecture",
+      ],
       image: ImgBichtec,
       github: "https://github.com/SantiagoPerezAgustin/Bichtec-Tienda-Virtual",
-      link: "https://github.com/SantiagoPerezAgustin/Bichtec-Tienda-Virtual",
+      link: "https://bichtec-tienda-virtual.vercel.app/",
       accent: "violet",
     },
     {
@@ -50,10 +61,10 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Brisa Calzado - E-commerce",
+      title: "Brisa Calzado — E-commerce",
       tag: "Full Stack",
       description:
-        "E-commerce full stack para emprendimiento familiar de calzado. Backend .NET 8 con API REST y arquitectura limpia, frontend React 19 con Vite, Tailwind y Context API.",
+        "E-commerce para emprendimiento familiar: .NET 8, API REST, React 19, Vite, Tailwind y Context API.",
       longDescription:
         "La idea fue digitalizar la operación de un negocio familiar y darle presencia web profesional. El backend usa .NET 8 y Entity Framework Core sobre SQL Server, con una API REST siguiendo arquitectura limpia (Domain, Application, Infrastructure). El frontend está en React 19 con Vite, Tailwind CSS, React Router para la navegación y Context API para el estado del carrito. Funcionalidades: catálogo por categorías con búsqueda en tiempo real y filtros, carrito de compras persistente, gestión de pedidos, formulario de contacto e integración con WhatsApp.",
       tech: [
@@ -73,12 +84,12 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: "Asistente de soporte con RAG",
+      title: "Asistente de soporte (RAG)",
       tag: "Full Stack + IA",
       description:
-        "Chat de soporte técnico con IA (RAG): backend Python con FastAPI y LangChain, gateway .NET 8, frontend React, logs en SQL Server y automatización con n8n y Gmail.",
+        "Ecosistema RAG con Mistral y LangChain, gateway .NET 8, microservicios Python (FastAPI), SQL Server y n8n para logs e informes automáticos.",
       longDescription:
-        "La idea fue construir un asistente que responda en español sobre documentación interna (PDF, Markdown y TXT) y que permita analizar las consultas más frecuentes. El backend de IA está en Python con FastAPI, LangChain y Ollama, usando Chroma como vector store para búsqueda semántica (RAG). Un gateway en .NET 8 expone la API REST, hace de proxy hacia el servicio de IA y persiste las conversaciones en SQL Server con Entity Framework Core. El frontend es un chat en React con historial de conversación y manejo de errores orientado al usuario. Además, un flujo en n8n consume los logs desde la API, calcula el top de preguntas más repetidas y envía un resumen automático por correo (Gmail) al equipo.",
+        "Desarrollé un ecosistema de soporte basado en RAG para consultas en lenguaje natural mediante Mistral AI y LangChain. Implementé un gateway en .NET 8 conectado a microservicios en Python (FastAPI) con persistencia en SQL Server, integrando n8n para la orquestación de logs y reportes automáticos de tendencias que optimizan la precisión del sistema. El frontend es un chat en React con historial y manejo de errores orientado al usuario.",
       tech: [
         "Python",
         "FastAPI",
@@ -98,6 +109,27 @@ const Projects = () => {
       link: "https://github.com/SantiagoPerezAgustin/RAG",
       accent: "emerald",
     },
+    {
+      id: 5,
+      title: "AI-Powered Job Hunter Assistant",
+      tag: "n8n · IA",
+      description:
+        "Flujo n8n que extrae vacantes vía APIs y RSS, analiza compatibilidad con Mistral AI y envía alertas por Telegram con scoring personalizado.",
+      longDescription:
+        "Diseñé y desplegué un flujo complejo en n8n que automatiza la extracción de vacantes mediante el consumo de APIs y feeds RSS de múltiples plataformas. Implementé un agente de Mistral AI para realizar análisis semántico de descripciones técnicas, evaluando automáticamente la compatibilidad del stack y el seniority del perfil, lo que permite reducir el ruido informativo en un 80%. El sistema concluye con una integración vía Telegram Bot API, enviando alertas en tiempo real con resúmenes estructurados y enlaces directos de postulación basados en un ranking de scoring personalizado.",
+      tech: [
+        "n8n",
+        "Mistral AI",
+        "Telegram Bot API",
+        "RSS",
+        "APIs REST",
+        "Prompt Engineering",
+      ],
+      image: null,
+      github: "https://github.com/SantiagoPerezAgustin",
+      link: "https://inquisitive-frangollo-12c63d.netlify.app/",
+      accent: "sky",
+    },
   ];
 
   const accentMap = {
@@ -105,6 +137,7 @@ const Projects = () => {
     fuchsia: { gradient: "from-fuchsia-500 to-pink-500",    tag: "bg-fuchsia-500/10 text-fuchsia-300 border-fuchsia-500/20", tech: "bg-fuchsia-500/10 text-fuchsia-300 border-fuchsia-500/20 hover:bg-fuchsia-500/25", btn: "from-fuchsia-600 to-pink-600"    },
     amber:   { gradient: "from-amber-500 to-orange-500",    tag: "bg-amber-500/10 text-amber-300 border-amber-500/20",     tech: "bg-amber-500/10 text-amber-300 border-amber-500/20 hover:bg-amber-500/25",     btn: "from-amber-500 to-orange-500"    },
     emerald: { gradient: "from-emerald-500 to-teal-500",    tag: "bg-emerald-500/10 text-emerald-300 border-emerald-500/20", tech: "bg-emerald-500/10 text-emerald-300 border-emerald-500/20 hover:bg-emerald-500/25", btn: "from-emerald-600 to-teal-600"    },
+    sky:     { gradient: "from-sky-500 to-cyan-500",        tag: "bg-sky-500/10 text-sky-300 border-sky-500/20",         tech: "bg-sky-500/10 text-sky-300 border-sky-500/20 hover:bg-sky-500/25",             btn: "from-sky-600 to-cyan-600"          },
   };
 
   return (
@@ -134,18 +167,25 @@ const Projects = () => {
                 <div className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r ${a.gradient}`} />
 
                 <div className="relative h-44 overflow-hidden bg-zinc-950">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/20 to-transparent" />
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-300"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-zinc-900 via-zinc-950 to-zinc-900">
+                      <span className="text-[10px] font-bold tracking-[0.35em] text-zinc-500 uppercase">Automatización</span>
+                      <span className="mt-1 text-2xl font-black bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">n8n</span>
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/20 to-transparent pointer-events-none" />
                   <span className={`absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-semibold border ${a.tag}`}>
                     {project.tag}
                   </span>
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                     <span className="px-4 py-2 rounded-lg bg-black/60 text-white text-xs font-semibold tracking-wide border border-white/10">
                       Ver detalle →
                     </span>

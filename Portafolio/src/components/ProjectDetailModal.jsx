@@ -5,6 +5,8 @@ const accentMap = {
   violet:  { gradient: "from-violet-500 to-fuchsia-500", tag: "bg-violet-500/10 text-violet-300 border-violet-500/20",  tech: "bg-violet-500/10 text-violet-300 border-violet-500/20",  btn: "from-violet-600 to-fuchsia-600" },
   fuchsia: { gradient: "from-fuchsia-500 to-pink-500",   tag: "bg-fuchsia-500/10 text-fuchsia-300 border-fuchsia-500/20", tech: "bg-fuchsia-500/10 text-fuchsia-300 border-fuchsia-500/20", btn: "from-fuchsia-600 to-pink-600"   },
   amber:   { gradient: "from-amber-500 to-orange-500",   tag: "bg-amber-500/10 text-amber-300 border-amber-500/20",   tech: "bg-amber-500/10 text-amber-300 border-amber-500/20",   btn: "from-amber-500 to-orange-500"   },
+  emerald: { gradient: "from-emerald-500 to-teal-500",   tag: "bg-emerald-500/10 text-emerald-300 border-emerald-500/20", tech: "bg-emerald-500/10 text-emerald-300 border-emerald-500/20", btn: "from-emerald-600 to-teal-600"   },
+  sky:     { gradient: "from-sky-500 to-cyan-500",       tag: "bg-sky-500/10 text-sky-300 border-sky-500/20",         tech: "bg-sky-500/10 text-sky-300 border-sky-500/20",         btn: "from-sky-600 to-cyan-600"         },
 };
 
 const ProjectDetailModal = ({ project, onClose }) => {
@@ -39,13 +41,20 @@ const ProjectDetailModal = ({ project, onClose }) => {
         </button>
 
         <div className="relative h-48 overflow-hidden bg-zinc-950 rounded-t-2xl">
-          <img
-            src={project.image}
-            alt={project.title}
-            loading="lazy"
-            decoding="async"
-            className="w-full h-full object-cover opacity-70"
-          />
+          {project.image ? (
+            <img
+              src={project.image}
+              alt={project.title}
+              loading="lazy"
+              decoding="async"
+              className="w-full h-full object-cover opacity-70"
+            />
+          ) : (
+            <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-zinc-900 via-zinc-950 to-zinc-900 border-b border-white/5">
+              <span className="text-xs font-bold tracking-[0.35em] text-zinc-500 uppercase">Automatización</span>
+              <span className="mt-2 text-3xl font-black bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">n8n</span>
+            </div>
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/30 to-transparent" />
           {project.tag && (
             <span className={`absolute top-4 left-4 px-2.5 py-1 rounded-md text-xs font-semibold border ${a.tag}`}>
