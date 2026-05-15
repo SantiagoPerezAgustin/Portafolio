@@ -7,7 +7,7 @@ const Hero = () => {
 
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/mi-cv-profesional.pdf";
+    link.href = "/Santiago_Agustin_Perez_CV.pdf";
     link.download = "Santiago_Agustin_Perez_CV.pdf";
     link.click();
   };
