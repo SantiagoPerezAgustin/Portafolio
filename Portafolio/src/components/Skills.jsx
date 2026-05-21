@@ -2,7 +2,7 @@ const Skills = () => {
   const skillCategories = [
     { category: "Frontend",             accent: "violet",  skills: ["React", "TypeScript", "JavaScript", "Tailwind CSS", "Vite"] },
     { category: "Backend", accent: "fuchsia", skills: [".NET", "ASP.NET Core", "C#", "Python", "FastAPI", "JWT", "APIs RESTful"] },
-    { category: "Bases de Datos",       accent: "amber",   skills: ["SQL", "SQL Server", "MySQL", "Entity Framework"] },
+    { category: "Bases de Datos",       accent: "amber",   skills: ["PostgreSQL", "SQL", "SQL Server", "MySQL", "Entity Framework"] },
     { category: "IA, OCR y APIs",          accent: "violet",  skills: ["Mistral", "LangChain", "Ollama", "RAG", "Prompt Engineering", "Tesseract", "PyPDF2", "Telegram Bot API", "Adzuna API"] },
     { category: "Automatización & Cloud", accent: "fuchsia", skills: ["n8n", "Docker", "GitHub Actions", "CI/CD", "RSS / APIs", "Microsoft Azure", "Git", "Microservicios", "Visual Studio"] },
   ];

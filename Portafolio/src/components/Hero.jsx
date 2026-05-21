@@ -43,7 +43,7 @@ const Hero = () => {
         </p>
 
         <p className="text-base text-zinc-500 mb-12 max-w-xl mx-auto leading-relaxed">
-          Técnico en Programación (UTN). Integro <span className="text-zinc-400">.NET, React y SQL</span> con{" "}
+          Técnico en Programación (UTN). Integro <span className="text-zinc-400">React, .NET y PostgreSQL</span> con{" "}
           <span className="text-zinc-400">IA, RAG y automatización en n8n</span> para productos escalables y con impacto en negocio.
         </p>
 

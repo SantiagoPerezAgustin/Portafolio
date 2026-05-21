@@ -37,6 +37,32 @@ const Projects = () => {
     },
     {
       id: 2,
+      title: "Asistente de soporte (RAG)",
+      tag: "Full Stack + IA",
+      description:
+        "Ecosistema RAG con React, Python (FastAPI), gateway .NET 8, Mistral AI y LangChain; persistencia en SQL Server y automatización con n8n.",
+      longDescription:
+        "Desarrollé un ecosistema de soporte basado en RAG para consultas en lenguaje natural mediante Mistral AI y LangChain. Implementé un gateway en .NET 8 conectado a microservicios en Python (FastAPI) con persistencia en SQL Server, integrando n8n para la orquestación de logs y reportes automáticos de tendencias que optimizan la precisión del sistema. El frontend es un chat en React con historial y manejo de errores orientado al usuario.",
+      tech: [
+        "React",
+        "Python",
+        "FastAPI",
+        ".NET 8",
+        "Mistral AI",
+        "LangChain",
+        "Vite",
+        "Tailwind CSS",
+        "Entity Framework Core",
+        "SQL Server",
+        "n8n",
+      ],
+      image: imagenChat,
+      github: "https://github.com/SantiagoPerezAgustin/RAG",
+      link: "https://github.com/SantiagoPerezAgustin/RAG",
+      accent: "emerald",
+    },
+    {
+      id: 3,
       title: "Procesamiento de documentos + IA",
       tag: "IA · Microservicios",
       description:
@@ -60,7 +86,7 @@ const Projects = () => {
       accent: "fuchsia",
     },
     {
-      id: 3,
+      id: 4,
       title: "Brisa Calzado — E-commerce",
       tag: "Full Stack",
       description:
@@ -83,44 +109,18 @@ const Projects = () => {
       accent: "amber",
     },
     {
-      id: 4,
-      title: "Asistente de soporte (RAG)",
-      tag: "Full Stack + IA",
-      description:
-        "Ecosistema RAG con Mistral y LangChain, gateway .NET 8, microservicios Python (FastAPI), SQL Server y n8n para logs e informes automáticos.",
-      longDescription:
-        "Desarrollé un ecosistema de soporte basado en RAG para consultas en lenguaje natural mediante Mistral AI y LangChain. Implementé un gateway en .NET 8 conectado a microservicios en Python (FastAPI) con persistencia en SQL Server, integrando n8n para la orquestación de logs y reportes automáticos de tendencias que optimizan la precisión del sistema. El frontend es un chat en React con historial y manejo de errores orientado al usuario.",
-      tech: [
-        "Python",
-        "FastAPI",
-        "LangChain",
-        "Ollama",
-        "Chroma",
-        "React",
-        "Vite",
-        "Tailwind CSS",
-        ".NET 8",
-        "Entity Framework Core",
-        "SQL Server",
-        "n8n",
-      ],
-      image: imagenChat,
-      github: "https://github.com/SantiagoPerezAgustin/RAG",
-      link: "https://github.com/SantiagoPerezAgustin/RAG",
-      accent: "emerald",
-    },
-    {
       id: 5,
       title: "AI-Powered Job Hunter Assistant",
-      tag: "n8n · IA",
+      tag: "n8n · AI",
       description:
-        "Flujo n8n que extrae vacantes vía APIs y RSS, analiza compatibilidad con Mistral AI y envía alertas por Telegram con scoring personalizado.",
+        "Flujo n8n que extrae vacantes vía APIs y RSS, analiza compatibilidad con Mistral AI y envía alertas por Telegram; persistencia e idempotencia en PostgreSQL.",
       longDescription:
-        "Diseñé y desplegué un flujo complejo en n8n que automatiza la extracción de vacantes mediante el consumo de APIs y feeds RSS de múltiples plataformas. Implementé un agente de Mistral AI para realizar análisis semántico de descripciones técnicas, evaluando automáticamente la compatibilidad del stack y el seniority del perfil, lo que permite reducir el ruido informativo en un 80%. El sistema concluye con una integración vía Telegram Bot API, enviando alertas en tiempo real con resúmenes estructurados y enlaces directos de postulación basados en un ranking de scoring personalizado.",
+        "Diseñé y desplegué un flujo complejo en n8n que automatiza la extracción de vacantes mediante el consumo de APIs y feeds RSS de múltiples plataformas. Implementé un agente de Mistral AI para realizar análisis semántico de descripciones técnicas, evaluando automáticamente la compatibilidad del stack y el seniority del perfil, lo que permite reducir el ruido informativo en un 80%. La persistencia e idempotencia del flujo se gestionan en PostgreSQL. El sistema concluye con una integración vía Telegram Bot API, enviando alertas en tiempo real con resúmenes estructurados y enlaces directos de postulación basados en un ranking de scoring personalizado.",
       tech: [
         "n8n",
         "Mistral AI",
         "Telegram Bot API",
+        "PostgreSQL",
         "RSS",
         "APIs REST",
         "Prompt Engineering",

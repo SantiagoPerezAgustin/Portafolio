@@ -2,7 +2,7 @@ import { Code2, Zap, Palette, Brain } from "lucide-react";
 
 const About = () => {
   const areas = [
-    { icon: Code2,   title: "Backend",           description: ".NET 8, C#, SQL Server, Python, FastAPI, APIs REST, JWT", color: "violet"  },
+    { icon: Code2,   title: "Backend",           description: ".NET 8, C#, PostgreSQL, SQL Server, Python, FastAPI, APIs REST, JWT", color: "violet"  },
     { icon: Palette, title: "Frontend",          description: "React, TypeScript, JavaScript, Tailwind CSS, Vite",     color: "fuchsia" },
     { icon: Brain,   title: "IA & datos",        description: "Mistral, LangChain, RAG, OCR, prompt engineering",       color: "amber"   },
     { icon: Zap,     title: "Automatización",   description: "n8n, Docker, GitHub Actions, CI/CD, Azure, microservicios", color: "violet"  },
