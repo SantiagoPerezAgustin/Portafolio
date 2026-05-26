@@ -40,13 +40,14 @@ const Projects = () => {
       title: "Asistente de soporte (RAG)",
       tag: "Full Stack + IA",
       description:
-        "Ecosistema RAG con React, Python (FastAPI), gateway .NET 8, Mistral AI y LangChain; persistencia en SQL Server y automatización con n8n.",
+        "Ecosistema RAG con React, Python (FastAPI) y un gateway en .NET 8. Integra Mistral AI y LangChain; persistencia en SQL Server y automatización con n8n.",
       longDescription:
         "Desarrollé un ecosistema de soporte basado en RAG para consultas en lenguaje natural mediante Mistral AI y LangChain. Implementé un gateway en .NET 8 conectado a microservicios en Python (FastAPI) con persistencia en SQL Server, integrando n8n para la orquestación de logs y reportes automáticos de tendencias que optimizan la precisión del sistema. El frontend es un chat en React con historial y manejo de errores orientado al usuario.",
       tech: [
         "React",
         "Python",
         "FastAPI",
+        "PostgreSQL",
         ".NET 8",
         "Mistral AI",
         "LangChain",
