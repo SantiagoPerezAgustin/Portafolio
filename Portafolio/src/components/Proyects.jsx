@@ -4,6 +4,7 @@ import imagenInicio from "../assets/iNICIO.webp";
 import imagenBrisaCalzado from "../assets/Brisa.webp";
 import ImgBichtec from "../assets/bichtec.webp";
 import imagenChat from "../assets/ChatInicio.webp";
+import imagenRealEstate from "../assets/realEstateAgent.webp";
 import ProjectDetailModal from "./ProjectDetailModal";
 
 const Projects = () => {
@@ -129,6 +130,28 @@ const Projects = () => {
       image: null,
       github: "https://github.com/SantiagoPerezAgustin",
       link: "https://inquisitive-frangollo-12c63d.netlify.app/",
+      accent: "sky",
+    },
+    {
+      id: 6,
+      title: "AI Real Estate Agent & Lead Scoring",
+      tag: "n8n · AI",
+      description:
+        "Flujo n8n con arquitectura asincrónica: webhooks HTTP para respuestas inmediatas, agente Mistral AI sobre PostgreSQL, lead scoring y alertas vía Gmail API.",
+      longDescription:
+        "Diseñé un flujo en paralelo en n8n para optimizar la experiencia de usuario, despachando respuestas inmediatas mediante Webhooks HTTP mientras los procesos pesados corren en segundo plano. Conecté un agente de Mistral AI con herramientas dinámicas (Tools) para realizar búsquedas en tiempo real sobre un inventario relacional en PostgreSQL basado en lenguaje natural. Desarrollé lógica defensiva en JavaScript dentro del flujo para normalizar payloads, validar datos de entrada y asegurar la inserción limpia en la base de datos, logrando un sistema tolerante a fallos. Implementé lógica de negocio automatizada para calcular un lead score personalizado según la interacción del cliente, disparando alertas de alta prioridad mediante la API de Gmail.",
+      tech: [
+        "n8n",
+        "Mistral AI",
+        "PostgreSQL",
+        "JavaScript",
+        "REST APIs",
+        "Postman",
+        "Gmail API",
+      ],
+      image: imagenRealEstate,
+      github: "https://github.com/SantiagoPerezAgustin",
+      link: "https://github.com/SantiagoPerezAgustin",
       accent: "sky",
     },
   ];
