@@ -37,6 +37,30 @@ const Projects = () => {
       accent: "violet",
     },
     {
+      id: 7,
+      title: "BICHTEC — HITL AI Sales Agent",
+      tag: "AI & Full Stack",
+      description:
+        "Agente de ventas en WhatsApp con n8n, Evolution API, Mistral AI y Qdrant; búsqueda semántica de productos (RAG) y patrón Human-In-The-Loop en PostgreSQL.",
+      longDescription:
+        "Diseñé e implementé un agente agéntico de ventas e-commerce en WhatsApp mediante n8n, Evolution API, Mistral AI y Qdrant Vector Store para la búsqueda semántica de productos (RAG). Implementé un patrón Human-In-The-Loop (HITL) en PostgreSQL (requiere_humano) con aislamiento de estado por cliente, permitiendo la pausa automática de la IA tras compras o derivaciones y su reactivación mediante comandos en chat (/bot_on). Desarrollé un pipeline multicanal de notificaciones operativas (Telegram Bot API y Gmail) para alertas de ventas y solicitudes de atención humana en tiempo real.",
+      tech: [
+        "n8n",
+        "Mistral AI",
+        "Qdrant",
+        "PostgreSQL",
+        "Evolution API",
+        "RAG",
+        "HITL",
+        "Telegram Bot API",
+        "Gmail API",
+      ],
+      image: ImgBichtec,
+      github: "https://github.com/SantiagoPerezAgustin/Bichtec-Tienda-Virtual",
+      link: "https://bichtec-tienda-virtual.vercel.app/",
+      accent: "fuchsia",
+    },
+    {
       id: 2,
       title: "Asistente de soporte (RAG)",
       tag: "Full Stack + IA",
