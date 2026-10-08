@@ -5,6 +5,7 @@ import imagenBrisaCalzado from "../assets/Brisa.webp";
 import ImgBichtec from "../assets/bichtec.webp";
 import imagenChat from "../assets/ChatInicio.webp";
 import imagenRealEstate from "../assets/realEstateAgent.webp";
+import imagenHitlBot from "../assets/n8nChatBot.webp";
 import ProjectDetailModal from "./ProjectDetailModal";
 
 const Projects = () => {
@@ -55,7 +56,7 @@ const Projects = () => {
         "Telegram Bot API",
         "Gmail API",
       ],
-      image: ImgBichtec,
+      image: imagenHitlBot,
       github: "https://github.com/SantiagoPerezAgustin/Bichtec-Tienda-Virtual",
       link: "https://bichtec-tienda-virtual.vercel.app/",
       accent: "fuchsia",

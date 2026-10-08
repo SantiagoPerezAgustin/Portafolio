@@ -4,12 +4,12 @@ const About = () => {
   const areas = [
     { icon: Code2,   title: "Backend",           description: ".NET 8, C#, PostgreSQL, SQL Server, Python, FastAPI, APIs REST, JWT", color: "violet"  },
     { icon: Palette, title: "Frontend",          description: "React, TypeScript, JavaScript, Tailwind CSS, Vite",     color: "fuchsia" },
-    { icon: Brain,   title: "IA & datos",        description: "Mistral, LangChain, RAG, OCR, prompt engineering",       color: "amber"   },
-    { icon: Zap,     title: "Automatización",   description: "n8n, Docker, GitHub Actions, CI/CD, Azure, microservicios", color: "violet"  },
+    { icon: Brain,   title: "IA & datos",        description: "Mistral, LangChain, RAG, Qdrant, HITL, Evolution API",       color: "amber"   },
+    { icon: Zap,     title: "Automatización",   description: "n8n, Docker, GitHub Actions, CI/CD, Clean Architecture", color: "violet"  },
   ];
 
   const stats = [
-    { number: "5+",  label: "Proyectos destacados"   },
+    { number: "7+",  label: "Proyectos destacados"   },
     { number: "UTN", label: "Técnico en Programación" },
     { number: "B1",  label: "Inglés (lectura técnica)" },
     { number: "2+",  label: "Años construyendo producto" },

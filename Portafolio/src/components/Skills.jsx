@@ -1,10 +1,10 @@
 const Skills = () => {
   const skillCategories = [
     { category: "Frontend",             accent: "violet",  skills: ["React", "TypeScript", "JavaScript", "Tailwind CSS", "Vite"] },
-    { category: "Backend", accent: "fuchsia", skills: [".NET", "ASP.NET Core", "C#", "Python", "FastAPI", "JWT", "APIs RESTful"] },
+    { category: "Backend", accent: "fuchsia", skills: [".NET 8", "ASP.NET Core", "C#", "Python", "FastAPI", "JWT", "APIs RESTful"] },
     { category: "Bases de Datos",       accent: "amber",   skills: ["PostgreSQL", "SQL", "SQL Server", "MySQL", "Entity Framework"] },
-    { category: "IA, OCR y APIs",          accent: "violet",  skills: ["Mistral", "LangChain", "Ollama", "RAG", "Prompt Engineering", "Tesseract", "PyPDF2", "Telegram Bot API", "Adzuna API"] },
-    { category: "Automatización & Cloud", accent: "fuchsia", skills: ["n8n", "Docker", "GitHub Actions", "CI/CD", "RSS / APIs", "Microsoft Azure", "Git", "Microservicios", "Visual Studio"] },
+    { category: "IA, OCR y APIs",          accent: "violet",  skills: ["Mistral AI", "LangChain", "Ollama", "RAG", "Qdrant", "HITL", "Evolution API", "Memory Persistence", "Prompt Engineering", "Tesseract", "PyPDF2", "Telegram Bot API", "Adzuna API"] },
+    { category: "Automatización & Cloud", accent: "fuchsia", skills: ["n8n", "Docker", "GitHub Actions", "CI/CD", "Clean Architecture", "RSS / APIs", "Microsoft Azure", "Git", "Microservicios", "Visual Studio"] },
   ];
 
   const accentMap = {
