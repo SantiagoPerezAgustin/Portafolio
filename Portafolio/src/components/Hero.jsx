@@ -33,7 +33,7 @@ const Hero = () => {
             <span className="text-white">Santiago Perez</span>
             <br />
             <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-amber-400 bg-clip-text text-transparent">
-              Pérez
+              Perez
             </span>
           </h1>
         </div>
