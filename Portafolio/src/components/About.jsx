@@ -33,7 +33,7 @@ const About = () => {
 
         <h2 className="text-5xl md:text-6xl font-black text-white mb-16 leading-tight">
           Hola, soy<br />
-          <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Santiago Agustín.</span>
+          <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Santiago Perez.</span>
         </h2>
 
         <div className="grid md:grid-cols-2 gap-16 items-start">

@@ -18,9 +18,11 @@ const Hero = () => {
   ];
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center pt-20 px-6">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center pt-20 px-6"
+    >
       <div className="text-center max-w-4xl w-full">
-
         <div className="mb-8 flex justify-center">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-violet-500/30 bg-violet-500/10 text-violet-300 text-sm font-medium tracking-wide">
             <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
@@ -30,7 +32,7 @@ const Hero = () => {
 
         <div className="mb-4 leading-none tracking-tight">
           <h1 className="text-5xl sm:text-6xl md:text-8xl font-black">
-            <span className="text-white">Santiago Perez</span>
+            <span className="text-white">Santiago Agustín</span>
             <br />
             <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-amber-400 bg-clip-text text-transparent">
               Perez
@@ -43,8 +45,10 @@ const Hero = () => {
         </p>
 
         <p className="text-base text-zinc-500 mb-12 max-w-xl mx-auto leading-relaxed">
-          Técnico en Programación (UTN). Integro <span className="text-zinc-400">React, .NET y PostgreSQL</span> con{" "}
-          <span className="text-zinc-400">IA, RAG y automatización en n8n</span> para productos escalables y con impacto en negocio.
+          Técnico en Programación (UTN). Integro{" "}
+          <span className="text-zinc-400">React, .NET y PostgreSQL</span> con{" "}
+          <span className="text-zinc-400">IA, RAG y automatización en n8n</span>{" "}
+          para productos escalables y con impacto en negocio.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
