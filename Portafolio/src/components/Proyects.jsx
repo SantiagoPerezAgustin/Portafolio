@@ -34,7 +34,7 @@ const Projects = () => {
       ],
       image: ImgBichtec,
       github: "https://github.com/SantiagoPerezAgustin/Bichtec-Tienda-Virtual",
-      link: "https://bichtec-tienda-virtual.vercel.app/",
+      link: "https://tienda.bichtec.tech/",
       accent: "violet",
     },
     {
@@ -57,7 +57,7 @@ const Projects = () => {
         "Gmail API",
       ],
       image: imagenHitlBot,
-      github: "https://github.com/SantiagoPerezAgustin/Bichtec-Tienda-Virtual",
+      github: "https://github.com/SantiagoPerezAgustin/Chat_BOT",
       link: "https://bichtec-tienda-virtual.vercel.app/",
       accent: "fuchsia",
     },

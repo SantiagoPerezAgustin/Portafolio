@@ -30,7 +30,7 @@ const Hero = () => {
 
         <div className="mb-4 leading-none tracking-tight">
           <h1 className="text-5xl sm:text-6xl md:text-8xl font-black">
-            <span className="text-white">Santiago Agustín</span>
+            <span className="text-white">Santiago Perez</span>
             <br />
             <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-amber-400 bg-clip-text text-transparent">
               Pérez
